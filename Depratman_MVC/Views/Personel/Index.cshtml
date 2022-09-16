@@ -1,0 +1,58 @@
+﻿
+@using Depratman_MVC.Models
+
+@model List<Personel>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>PERSONEL LISTESI</h2>
+
+
+
+<a class="btn btn-success" href="/Personel/NewPerson">yeni personel ekle</a>
+<br />
+<br />
+
+<table class="table table-striped table-info">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            @*<th scope="col">DEPARTMAN ID</th>*@
+            <th scope="col">ADI</th>
+            <th scope="col">SOYADI</th>
+            <th scope="col">MAAS</th>
+            <th scope="col">DOGUM TARIHI</th>
+            <th scope="col">CINSIYET</th>
+            <th scope="col">MENEDI_HALI</th>
+            <th scope="col">GUNCELLE</th>
+            <th scope="col">SIL</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">@item.ID</th>
+                @*<td>@item.DepartmanID</td>*@
+                <td>@item.Ad</td>
+                <td>@item.Soyadi</td>
+                <td>@item.Maas</td>
+                <td>@item.DogumTarihi</td>
+                <td>@item.Cinsiyet</td>
+                <td>@item.MedeniHali</td>
+                <td><a class="btn btn-primary" href="#">Guncelle</a></td>
+                <td><a class="btn btn-danger" href="#">Sil</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+
+

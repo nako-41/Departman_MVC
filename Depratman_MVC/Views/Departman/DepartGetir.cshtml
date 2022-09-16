@@ -1,0 +1,25 @@
+﻿@using Depratman_MVC.Models
+
+@model Depratman_MVC.Models.Departman
+
+
+@{
+    ViewBag.Title = "DepartGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DepartGetir</h2>
+
+
+
+@using (Html.BeginForm("DepartGetir", "Departman", FormMethod.Post))
+{
+
+    <b>Departman ID</b>
+    @Html.TextAreaFor(x => x.ID, new { @class = "form-control" })
+    <br />
+    <b>Departman ADI</b>
+    @Html.TextAreaFor(x=>x.Ad,new { @class="form-control" })
+    <br />
+    <button class="btn btn-success">Departman Guncelle</button>
+}

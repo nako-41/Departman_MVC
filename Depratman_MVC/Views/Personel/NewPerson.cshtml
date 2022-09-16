@@ -1,0 +1,45 @@
+﻿@using Depratman_MVC.Models
+
+@model List<Personel>
+
+@*@model IEnumerable<(Depratman_MVC.Models.Personel p, Depratman_MVC.Models.Departman d)>*@
+
+
+
+@{
+    ViewBag.Title = "NewPerson";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>PERSONEL EKLEME SAYFASI</h2>
+
+
+<form method="post" action="~/Personel/NewPerson">
+
+    <div class="form-group">
+        <label for="formGroupExampleInput">PERSONEL ADI</label>
+        <input type="text" name="Ad" class="form-control" placeholder="personel adı">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">PERSONEL SOYADI</label>
+        <input type="text" name="Soyadi" class="form-control" placeholder="personel soyadı">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput3">MAAS</label>
+        <input type="number" name="Maas" class="form-control" placeholder="maas">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput4">DOGUM TARIHI</label>
+        <input type="date" name="Dogum Tarihi" class="form-control" placeholder="dogum tarihi">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput5">CINSIYET</label>
+        <input type="text" name="Cinsiyet" class="form-control" placeholder="cinsiyet">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput6">MEDENI HALI</label>
+        <input type="text" name="MedeniHali" class="form-control" placeholder="medeni hali">
+    </div>
+
+    <button type="submit" class="btn btn-info">EKLE</button>
+</form>

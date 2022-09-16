@@ -1,0 +1,18 @@
+﻿@using Depratman_MVC.Models
+
+@{
+    ViewBag.Title = "Yeni";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DEPARTMAN EKLEME SAYFASI </h2>
+
+<form method="post" action="~/Departman/Yeni">
+    <div class="form-group">
+        <label>Departman ADI</label>
+        <input type="text" name="Ad" class="form-control"/>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-info">EKLE</button>
+</form>
+

@@ -1,0 +1,47 @@
+﻿@using Depratman_MVC.Models
+
+@model List<Depratman_MVC.Models.Departman>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+@section style
+    {
+     <style>
+
+     </style>
+    }
+
+<h2>DEPARTMAN SAYFASI</h2> 
+
+
+
+<a class="btn btn-success" href="/Departman/Yeni">yeni departman ekle</a> 
+
+<br />
+<br />
+<table class="table table-striped table-light">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">AD</th>
+            <th scope="col">GUNCELLE</th>
+            <th scope="col">SIL</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <th scope="row">@item.ID</th>
+            <td>@item.Ad</td>
+            <td><a class="btn btn-primary" href="/Depatman/DepartGetir/@item.ID">Guncelle</a></td>
+            <td><a class="btn btn-danger" href="/Depatman/Delete/@item.ID">Sil</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
